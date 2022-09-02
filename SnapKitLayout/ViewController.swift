@@ -61,6 +61,7 @@ class FirstView : UIView, UITextFieldDelegate{
             make.centerX.equalToSuperview()
             make.left.equalToSuperview()
             make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
             make.bottom.equalTo(image)
         
         }
@@ -157,6 +158,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstView.delegate = self
+        third.delegate = self
+        
         self.view.addSubview(firstView)
         self.view.addSubview(secondView)
         self.view.addSubview(third)
