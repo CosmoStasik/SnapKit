@@ -50,12 +50,15 @@ class FirstView : UIView, UITextFieldDelegate{
         secondVelticalStackView.addArrangedSubview(textFldFirst)
         textFldFirst.borderStyle = .roundedRect
         textFldFirst.placeholder = "Enter First Name"
+        textFldFirst.delegate = self
         secondVelticalStackView.addArrangedSubview(textFldMiddle)
         textFldMiddle.borderStyle = .roundedRect
         textFldMiddle.placeholder = "Enter Middle Name"
+        textFldMiddle.delegate = self
         secondVelticalStackView.addArrangedSubview(textFldLast)
         textFldLast.borderStyle = .roundedRect
         textFldLast.placeholder = "Enter Last Name"
+        textFldLast.delegate = self
         
         horizontalStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
